@@ -1,0 +1,255 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* declare color variables */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-grey: hsl(0, 0%, 9%);
+    --medium-grey: hsl(0, 0%, 73%);
+    --light-grey: hsl(0, 0%, 85%);
+    --blue: hsl(216, 80%, 52%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    width: 1512px;
+    height: 8968px;
+}
+
+.navbar {
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 5rem;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-items {
+    list-style-type: none;
+    margin-left: 3rem;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.nav-items::after {
+    content: '';
+    width: 0rem;
+    height: 0.15rem;
+    background-color: var(--white);
+    display: block;
+    border-radius: 0.2rem;
+    margin: 0.2rem auto 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-items:hover::after {
+    width: 2rem;
+}
+
+.main-heading {
+    color: black;
+    font-family: 'Playfair Display', sans-serif;
+    padding: 330px;
+}
+
+.main-heading-one {
+    font-size: 240px;
+    text-align: center;
+    line-height: 115px;
+}
+
+.main-heading-two {
+    font-size: 220px;;
+    text-align: center;
+}
+
+.image1 {
+    position: absolute;
+    right: 820px;
+    top: 165px;
+    z-index: -1;
+}
+
+.image2 {
+    position: absolute;
+    left: 8px;
+    top: 500px;
+    z-index: -1;
+}
+
+.heading-para {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    left: 150px;
+    top: 250px;
+}
+
+.heading-btn {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    width: 190px;
+    height: 50px;
+    font-size: 26px;
+    background-color: var(--white);
+	text-shadow: var(--black);
+    border: none;
+    right: 1435px;
+    margin-top: 57px;
+}
+
+.heading-btn:hover {
+    transition: 0.6s;
+    background-color: #3bdfdf;
+}
+
+.main-section-heading {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    font-size: 82px;
+}
+
+.images {
+    position: absolute;
+    bottom: -950px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-one { 
+    position: absolute;
+    width: 577.09px;
+    height: 995.48px;
+    top: -500px;
+}
+
+.image6 {
+    position: absolute;
+    width: 577.09px;
+    height: 624.7px;
+    right: -1300px;
+    top: -500px;
+}
+
+.image5 {
+    position: absolute;
+    width: 577.09px;
+    height: 818.34px;
+    bottom: -1200px;
+}
+
+.image4 {
+    position: absolute;
+    width: 577.09px;
+    height: 1389.22px;
+    right: -1300px;
+    bottom: -1400px;
+}
+
+.image3 {
+    position: absolute;
+    width: 577.09px;
+    height: 802.87px;
+    bottom: -2100px;
+}
+
+.image-two {
+    position: absolute;
+    width: 577.09px;
+    height: 605.76px;
+    bottom: -3700px;
+    right: -1300px;
+    top: 1695px;
+}
+
+.about {
+    position: absolute;
+    bottom: -4100px;
+    margin: 100px;
+    background: var(--black);
+    margin-top: 20px;
+    border-radius: 1rem;
+}
+
+.about:before, .about:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.about:after {
+	filter: blur(50px);
+}
+
+.about-desc {
+    display: absolute;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    font-size: 40px;
+}
+
+.about-header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    font-size: 81.31px;
+}
+
+.officeImg {
+    position: absolute;
+    width: 589.52px;
+    height: 805.88px;
+    right: -800px;
+    top: -5px;
+}
